@@ -1,0 +1,459 @@
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root{
+  height: 100%;
+}
+
+/* Layout */
+.grid-container{
+  display: grid;
+  grid-template-areas:
+  'header'
+  'main'
+  'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+
+header{
+  grid-area: header;
+  background-color: rgb(197 66 45) ;
+}
+
+
+main{
+  grid-area: main;
+  /* padding: 1rem; */
+}
+
+.p-1{
+  padding: 1rem;
+}
+
+footer{
+  grid-area: footer;
+  background-color: rgb(197 66 45);
+  color: #fff;
+}
+
+/* Common */
+a{
+  text-decoration: none;
+}
+
+.c-white{
+  color: white;
+}
+
+.c-black{
+  color: black !important;
+}
+
+a:hover{
+  color:#7a3515;
+  transition: 0.5s;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li{
+  margin-top: 1rem;
+}
+
+
+input,
+select,
+textarea,
+button{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem rgb(218, 97, 40) solid;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button{
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+button.primary{
+  background-color: rgb(197 66 45);
+  color: white;
+}
+
+button.secondary{
+  background-color: rgb(190, 65, 65);
+  color: white;
+}
+
+button.tertiary{
+  background-color: rgb(38, 165, 133);
+  color: white;
+  border: solid rgb(38, 165, 133) 0.1rem;
+}
+
+button.block{
+  width: 100%;
+}
+
+button.small{
+  font-size: 1.2rem;
+}
+
+button.primary:hover{
+  background-color: white;
+  color:  rgb(197 66 45);
+  transition: 0.5s;
+  border: 0.1rem rgb(197 66 45) solid;
+}
+
+button.secondary:hover{
+  background-color: rgb(141, 42, 42);
+  color:  white;
+  transition: 0.5s;
+  border: 0.1rem rgb(141, 42, 42) solid;
+}
+
+button.tertiary:hover{
+  background-color: rgb(28, 110, 90);
+  color:  white;
+  transition: 0.5s;
+  border: 0.1rem rgb(28, 110, 90) solid;
+}
+
+h1{
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+h2{
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+
+h3{
+  font-size: 1.4rem;
+  padding: 1rem 0;
+}
+
+/* Header */
+
+header a{
+  color: white;
+  padding: 1rem;
+}
+
+a.brand{
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.badge{
+  background-color: #ee8768;
+  color:white;
+  border-radius: 20%;
+  padding: 0.1rem 0.5rem;
+  font-size: 1.2rem;
+  margin-left: 0.4rem;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.m-auto{
+  margin: auto;
+}
+.row.center{
+  justify-content: center;
+}
+
+.row.top{
+  align-items: flex-start;
+}
+.col-1{
+  flex: 1 1 25rem;
+}
+.col-2{
+  flex: 2 1 50rem;
+}
+
+.min-30{
+  min-width: 30rem;
+}
+
+
+/* Images */
+
+img.medium{
+  max-width: 29rem;
+  width: 100%;
+}
+
+img.large{
+  width: 68%;
+}
+
+img.small{
+  max-width: 5rem;
+  width: 100%;
+}
+
+/* Card */
+.card{
+  border: 0.1rem rgb(197 66 45) solid;
+  background-color: rgb(197 66 45);
+  margin: 1rem;
+}
+
+.bg-white{
+  background-color: white;
+}
+
+.card-body{
+  padding: 1rem;
+}
+
+.card-body > *{
+  margin-bottom: 0.5rem;
+}
+
+.price{
+  font-size: 2rem;
+  color:white;
+}
+
+/* Rating */
+
+.rating span{
+  color: #f0c040;
+  margin: 0.1rem;
+}
+
+/* Reviews */
+
+.reviews{
+  color: white;
+  margin-left: 0.2rem;
+}
+
+/* Alert */
+.loading{
+  display: block !important;
+}
+
+.success{
+  color:#20a020;
+}
+
+.danger{
+  color:#a02020;
+}
+
+.alert{
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+}
+
+.alert-info{
+  color: #2020a0;
+  background-color: #e0e0ff;
+}
+
+.alert-danger{
+  color: #a02020;
+  background-color: #ffe0e0;
+}
+
+/* Form */
+
+
+.form{
+  max-width: 60rem;
+  margin: 0 auto;
+  border: solid 0.1rem rgb(197 66 45);
+  vertical-align:middle;
+}
+
+.form-title{
+  background-color: rgb(197 66 45);
+}
+
+.light-orange{
+  background-color: rgb(218, 97, 40) !important;
+}
+
+.form-title > h1 {
+  margin: 0 0 0 1rem;
+  color: white;
+}
+
+.form-title > h3 {
+  margin: 0 0 0 1rem;
+  color: white;
+}
+
+.form-body > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.form-body{
+  margin: 1rem;
+}
+
+.form > label {
+  margin: 1rem 0;
+}
+
+.f-90{
+  max-width: 90rem;
+}
+
+.f-100{
+  max-width: 100%;
+}
+
+.f-90-percent{
+  max-width: 90%;
+}
+
+.f-95-percent{
+  max-width: 90%;
+}
+
+.f-98-percent{
+  max-width: 98%;
+}
+
+.f-80{
+  max-width: 80%;
+}
+
+
+.no-border{
+  border: none !important;
+}
+
+.no-border > h1 {
+  text-align: center;
+  color: #20a020;
+}
+
+/* Dropdown */
+
+.dropdown{
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content{
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 12rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: rgb(197 66 45);
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+
+/* Checkout Steps */
+.checkout-steps{
+  max-width: 90rem;
+  width: 100%;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+.checkout-steps > div{
+  border-top: 0.3rem #c0c0c0 solid;
+  color: #c0c0c0;
+  flex: 1;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.checkout-steps > .active{
+  border-top-color: rgb(197 66 45);
+  color: rgb(197 66 45);
+}
+
+/* Table */
+
+.table{
+  width: 100%;
+  border-collapse: collapse;
+  overflow: auto;
+} 
+
+.table tbody tr:nth-of-type(odd){
+  background-color: #f4f4f4;
+}
+
+.table tr th{
+  border: none;
+  padding: 2rem;
+}
+
+.table td, .table th{
+  text-align: left;
+  border: 0.1rem solid #e4e4e4;
+  padding: 1rem;
+}
+
+.table button {
+  margin: 0 0.2rem;
+
+}
+
+/* Title */
+
+.p-title{
+  min-width: 10rem;
+  max-width: 9%;
+  background: rgb(197 66 45);
+  padding: 3rem;
+  color: white;
+  font-size: 3rem;
+  border-radius: 0 5rem 5rem 0;
+  text-align: center;
+}
+
+/* Others */
+
+.bg-orange{
+  background-color: rgb(197 66 45);
+  color: white;
+}
