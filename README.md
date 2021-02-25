@@ -10,7 +10,7 @@ You must have Nodejs , MongoDB on your device to run the project.
 
 # Run Locally
 
-- $ git clone git@github.com:AeronIsog02/AJI.git
+- $ git clone git@github.com:AeronIsog02/aji-store-project.git
 - To start the Backend , type "npm start" on the backend folder
 - To start the Frontend , type "npm start" on the front-end folder
 
