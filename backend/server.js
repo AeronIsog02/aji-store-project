@@ -40,7 +40,7 @@ app.use((err, req, res, next) => {
     res.status(500).send({messege: err.message});
 });
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 80;
 
 app.listen(port, () =>{
     console.log(`Serve at http://localhost:${port}`);
