@@ -5,7 +5,7 @@ import productRouter from './routes/ProductRouter.js';
 import userRouter from './routes/UserRouter.js';
 import path from 'path';
 import orderRouter from './routes/OrderRouter.js';
-import uploadRouter from './routes/uploadRouter.js';
+import uploadRouter from './routes/UploadRouter.js';
 
 dotenv.config();
 
@@ -25,6 +25,7 @@ app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
 app.use('/api/orders', orderRouter);
 const __dirname = path.resolve();
+
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 
 app.use(express.static(path.join(__dirname, '/frontend/build')));
