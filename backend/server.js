@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/ajistore', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/ajistore', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
@@ -29,18 +29,16 @@ const __dirname = path.resolve();
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 
 app.use(express.static(path.join(__dirname, '/frontend/build')));
-app.get('*', (req, res) =>
+
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
-);
-// app.get('/', (req, res) => {
-//   res.send('Server is ready');
-// });
+});
 
 app.use((err, req, res, next) => {
     res.status(500).send({messege: err.message});
 });
 
-const port = process.env.PORT || 1000;
+const port = process.env.PORT;
 
 app.listen(port, () =>{
     console.log(`Serve at http://localhost:${port}`);
