@@ -43,3 +43,7 @@ You must have Nodejs , MongoDB on your device to run the project.
 # Admin Login
 - Run http://localhost:3000/login
 - Enter admin email and password and click signin
+
+# Admin credential
+- email: admin@gmail.com
+- password: aeronpogi
